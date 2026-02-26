@@ -11,13 +11,13 @@ pipeline{
 
         stage("Install dependencies"){
             steps{
-                sh 'python -m pip install --upgrade'
-                sh 'pip install -r requirements.txt'
+                bat 'python -m pip install --upgrade'
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('Run Tests'){
             steps{
-                sh 'pytest'
+                bat 'pytest'
             }
         }
 
