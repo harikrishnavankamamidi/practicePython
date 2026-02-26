@@ -1,6 +1,5 @@
 import pytest
 
-@pytest.fixture
 def dev_func(a,b):
     return a+b
 
