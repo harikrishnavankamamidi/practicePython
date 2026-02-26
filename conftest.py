@@ -7,3 +7,6 @@ def dev_func(a,b):
 def num_list_print():
     return [1,2,3,4,5,6]
 
+@pytest.fixture
+def sample_user():
+    return {"name": "Hari", "age": 25}
