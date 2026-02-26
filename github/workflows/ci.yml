@@ -1,0 +1,28 @@
+name: Python CI
+
+#This where we shoud decide when to run the workflow
+on:
+  push:
+    Branches: ['main']
+  pull_requests:
+    Branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest   # declaring the ubuntu versoin latest means it takes the new version
+    steps:
+      - name: checkouts code
+        uses: checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-Python@v5
+        with:
+          Python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run tests
+        run: pytest
