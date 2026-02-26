@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest   # declaring the ubuntu versoin latest means it takes the new version
     steps:
       - name: checkouts code
-        uses: checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-Python@v5
