@@ -14,6 +14,7 @@ pipeline{
                 sh 'python -m pip install --upgrade'
                 sh 'pip install -r requirements.txt'
             }
+        }
         stage('Run Tests'){
             steps{
                 sh 'pytest'
@@ -22,4 +23,3 @@ pipeline{
 
         }
     }
-}
